@@ -153,11 +153,7 @@ class EPD:
             for x in range(self.width):
                 # Set the bits for the column of pixels at the current position.
                 if pixels[x, y] == 0:
-                    if self.rotate ==0:
-                        buf[(x + y * self.width) / 8] &= ~(0x80 >> (x % 8))
-                    elif self.rotate==1:
-                        buf[((x)* self.height + (EPD_WIDTH-y) ) / 8] &= ~(0x80 >> (y % 8))
-                        #print ((x)* self.height + (self.width-y) )
+                    buf[(x + y * self.width) / 8] &= ~(0x80 >> (x % 8))
         return buf
 
     def display_frame(self, frame_buffer_black, frame_buffer_red):
