@@ -123,13 +123,24 @@ elif weather_icon == "wind":
 elif weather_icon=="cloud" or weather_icon=="pcloud" or weather_icon=="pcloudnight":
     icon_file='images/black/cloudy.bmp'
 
-#if icon_file != "":
-frame_black= disp.get_frame_buffer(Image.open('images/black/snow.bmp'))
+if icon_file != "":
+    #frame_black= disp.get_frame_buffer(Image.open(icon_file))
+    print icon_file
 
 # yellow part
+icon_file_yellow=''
+if weather_icon == "pcloud":
+    icon_file_yellow='images/yellow/pcloudysun.bmp'
+elif weather_icon == "pcloudnight":
+    icon_file_yellow='images/yellow/pcloudymoon.bmp'
+elif weather_icon == "storm":
+    icon_file_yellow='images/yellow/storm.bmp'
+elif weather_icon == "sun":
+    icon_file_yellow='images/yellow/sun.bmp'
+elif weather_icon=="night":
+    icon_file_yellow='images/yellow/moon.bmp'
 
-
-#frame_yellow= disp.get_frame_buffer(Image.open('images/black/cloudy.bmp'))
+frame_yellow= disp.get_frame_buffer(Image.open('images/yellow/pcloudysun.bmp'))
 
 ## draw Text
 disp.set_rotate(1)
