@@ -125,6 +125,7 @@ elif weather_icon=="cloud" or weather_icon=="pcloud" or weather_icon=="pcloudnig
 
 if icon_file != "":
     #frame_black= disp.get_frame_buffer(Image.open(icon_file))
+    frame_black= disp.get_frame_buffer(Image.open('images/black/cloudy.bmp'))
     print icon_file
 
 # yellow part
@@ -140,6 +141,7 @@ elif weather_icon == "sun":
 elif weather_icon=="night":
     icon_file_yellow='images/yellow/moon.bmp'
 
+print icon_file_yellow
 frame_yellow= disp.get_frame_buffer(Image.open('images/yellow/pcloudysun.bmp'))
 
 ## draw Text
