@@ -121,4 +121,4 @@ disp.draw_string_at(frame_black, 40, 5, month, font, COLORED)
 disp.draw_string_at(frame_black, 100, 5, dte, fontBold, COLORED)
 
 # display it 
-disp.display_frame)frame_black,frame_yellow)
+disp.display_frame(frame_black,frame_yellow)
