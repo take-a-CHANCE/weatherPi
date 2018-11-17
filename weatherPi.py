@@ -126,7 +126,7 @@ disp.draw_string_at(frame_black, 150, 5, date, fontBold, COLORED)
 
 # weather
 disp.draw_string_at(frame_yellow, 90, 55, str(highT), fontBoldBIG, COLORED)
-disp.draw_filled_rectangle(frame_black, 140, 60, 145, 70, COLORED)
+disp.draw_filled_rectangle(frame_black, 140, 55, 144, 95, COLORED)
 disp.draw_string_at(frame_black, 150, 55, str(lowT), fontBIG, COLORED)
 
 # display it 
