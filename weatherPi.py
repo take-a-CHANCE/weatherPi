@@ -116,9 +116,9 @@ frame_yellow= disp.get_frame_buffer(Image.open('images/black/cloudy.bmp'))
 
 ## draw Text
 disp.set_rotate(1)
-disp.draw_string_at(frame_black, 5, 5, day, fontBold, COLORED)
+disp.draw_string_at(frame_black, 5, 5, weekday, fontBold, COLORED)
 disp.draw_string_at(frame_black, 40, 5, month, font, COLORED)
-disp.draw_string_at(frame_black, 100, 5, dte, fontBold, COLORED)
+disp.draw_string_at(frame_black, 100, 5, date, fontBold, COLORED)
 
 # display it 
 disp.display_frame(frame_black,frame_yellow)
