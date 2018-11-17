@@ -111,6 +111,8 @@ date=time.strftime('%d')
 
 ## draw images first
 # black part
+
+
 frame_black= disp.get_frame_buffer(Image.open('images/black/cloudy.bmp'))
 
 # yellow part
@@ -120,9 +122,9 @@ frame_black= disp.get_frame_buffer(Image.open('images/black/cloudy.bmp'))
 disp.set_rotate(1)
 
 # date
-disp.draw_string_at(frame_black, 15, 5, weekday, fontBold, COLORED)
-disp.draw_string_at(frame_black, 80, 5, month, font, COLORED)
-disp.draw_string_at(frame_black, 150, 5, date, fontBold, COLORED)
+disp.draw_string_at(frame_black, 20, 5, weekday, fontBold, COLORED)
+disp.draw_string_at(frame_black, 85, 5, month, font, COLORED)
+disp.draw_string_at(frame_black, 155, 5, date, fontBold, COLORED)
 
 # weather
 disp.draw_string_at(frame_yellow, 90, 55, str(highT), fontBoldBIG, COLORED)
