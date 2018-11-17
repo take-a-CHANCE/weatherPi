@@ -4,7 +4,7 @@
 import json                 # weather data
 import time                 # time data
 import urllib               # fixing urls
-import includes.epd2in13b   # e ink library
+from includes import epd2in13b   # e ink library
 import Image                # Image manipulation
 import ImageFont            # Text Writing
 import ImageDraw            # Image drawing
