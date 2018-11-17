@@ -111,11 +111,24 @@ date=time.strftime('%d')
 
 ## draw images first
 # black part
+icon_file=''
+if weather_icon == "snow":
+    icon_file='images/black/snow.bmp'
+elif weather_icon == "rain":
+    icon_file='images/black/rain.bmp'
+elif weather_icon == "storm":
+    icon_file='images/black/storm.bmp'
+elif weather_icon == "wind":
+    icon_file='images/black/windy.bmp'
+elif weather_icon=="cloud" or weather_icon=="pcloud" or weather_icon=="pcloudnight":
+    icon_file='images/black/cloudy.bmp'
 
-
-frame_black= disp.get_frame_buffer(Image.open('images/black/cloudy.bmp'))
+#if icon_file != "":
+frame_black= disp.get_frame_buffer(Image.open('images/black/snow.bmp'))
 
 # yellow part
+
+
 #frame_yellow= disp.get_frame_buffer(Image.open('images/black/cloudy.bmp'))
 
 ## draw Text
