@@ -102,9 +102,9 @@ else:
     print("Warning, no weather information found!")
 
 # get date info
-weekday=time.strftime(%a)
-month=time.strftime(%b)
-date=time.strftime(%d)
+weekday=time.strftime('%a')
+month=time.strftime('%b')
+date=time.strftime('%d')
 
 
 ## draw images first
