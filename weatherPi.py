@@ -142,7 +142,7 @@ elif weather_icon=="night":
     icon_file_yellow='images/yellow/moon.bmp'
 
 print icon_file_yellow
-frame_yellow= disp.get_frame_buffer(Image.open('images/yellow/pcloudysun.bmp'))
+frame_yellow = disp.get_frame_buffer(Image.open('images/yellow/pcloudysun.bmp'))
 
 ## draw Text
 disp.set_rotate(1)
