@@ -123,8 +123,8 @@ disp.draw_string_at(frame_black, 80, 5, month, font, COLORED)
 disp.draw_string_at(frame_black, 150, 5, date, fontBold, COLORED)
 
 # weather
-disp.draw_string_at(frame_yellow, 100, 70, str(highT), fontBold, COLORED)
-disp.draw_string_at(frame_black, 150, 70, str(lowT), font, COLORED)
+disp.draw_string_at(frame_yellow, 100, 60, str(highT), fontBold, COLORED)
+disp.draw_string_at(frame_black, 150, 60, str(lowT), font, COLORED)
 
 # display it 
 disp.display_frame(frame_black,frame_yellow)
