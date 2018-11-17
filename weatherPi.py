@@ -63,6 +63,8 @@ frame_yellow = [0xFF] * (disp.width * disp.height / 8)
 # fonts to be used
 fontBold = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeSansBold.ttf', 35)
 font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeSans.ttf', 35)
+fontBoldBIG = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeSansBold.ttf', 40)
+fontBIG = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeSans.ttf', 40)
 
 # Get the weather data for the given location
 location_string = "{city}, {countrycode}".format(city=CITY, countrycode=COUNTRYCODE)
@@ -123,8 +125,8 @@ disp.draw_string_at(frame_black, 80, 5, month, font, COLORED)
 disp.draw_string_at(frame_black, 150, 5, date, fontBold, COLORED)
 
 # weather
-disp.draw_string_at(frame_yellow, 100, 60, str(highT), fontBold, COLORED)
-disp.draw_string_at(frame_black, 150, 60, str(lowT), font, COLORED)
+disp.draw_string_at(frame_yellow, 90, 55, str(highT), fontBoldBIG, COLORED)
+disp.draw_string_at(frame_black, 150, 55, str(lowT), fontBIG, COLORED)
 
 # display it 
 disp.display_frame(frame_black,frame_yellow)
