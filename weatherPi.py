@@ -126,6 +126,7 @@ disp.draw_string_at(frame_black, 150, 5, date, fontBold, COLORED)
 
 # weather
 disp.draw_string_at(frame_yellow, 90, 55, str(highT), fontBoldBIG, COLORED)
+disp.draw_vertical_line(frame_black, 120, 55, 5, COLORED)
 disp.draw_string_at(frame_black, 150, 55, str(lowT), fontBIG, COLORED)
 
 # display it 
