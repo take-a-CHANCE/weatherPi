@@ -123,11 +123,11 @@ elif weather_icon == "wind":
 elif weather_icon=="cloud" or weather_icon=="pcloud" or weather_icon=="pcloudnight":
     icon_file='images/black/cloudy.bmp'
 
+# make sure we should be drawing the black image and do it
 if icon_file != "":
-    #frame_black= disp.get_frame_buffer(Image.open(icon_file))
-    frame_black= disp.get_frame_buffer(Image.open('images/black/cloudy.bmp'))
-    print icon_file
-
+    frame_black= disp.get_frame_buffer(Image.open(icon_file))
+    
+    
 # yellow part
 icon_file_yellow=''
 if weather_icon == "pcloud":
@@ -141,8 +141,9 @@ elif weather_icon == "sun":
 elif weather_icon=="night":
     icon_file_yellow='images/yellow/moon.bmp'
 
-print icon_file_yellow
-frame_yellow = disp.get_frame_buffer(Image.open('images/yellow/pcloudysun.bmp'))
+# make sure we should be drawing the yellow image and do it
+if icon_file_yellow != "":
+    frame_yellow = disp.get_frame_buffer(Image.open(icon_file_yellow))
 
 ## draw Text
 disp.set_rotate(1)
