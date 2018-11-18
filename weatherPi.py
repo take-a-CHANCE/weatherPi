@@ -156,7 +156,7 @@ disp.set_rotate(1)
 # date
 disp.draw_string_at(frame_black, 15, 5, weekday, fontBold, COLORED)
 disp.draw_string_at(frame_black, 85, 5, month, font, COLORED)
-disp.draw_string_at(frame_black, 155, 5, date, fontBold, COLORED)
+disp.draw_string_at(frame_black, 160, 5, date, fontBold, COLORED)
 
 # weather
 disp.draw_string_at(frame_yellow, 90, 55, str(highT), fontBoldBIG, COLORED)
