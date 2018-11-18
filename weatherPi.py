@@ -8,6 +8,7 @@ from includes import epd2in13b   # e ink library
 import Image                # Image manipulation
 import ImageFont            # Text Writing
 import ImageDraw            # Image drawing
+import os               # for relative path
 
 try:
     import requests         # needed for getting data
@@ -125,9 +126,11 @@ elif weather_icon=="cloud" or weather_icon=="pcloud" or weather_icon=="pcloudnig
 
 # make sure we should be drawing the black image and do it
 if icon_file != "":
-    frame_black= disp.get_frame_buffer(Image.open(icon_file))
+    dir = os.path.dirname(__file__)
+    file_path=os.path.join(dir,icon_file)
+    frame_black= disp.get_frame_buffer(Image.open(file_path))
     
-    
+
 # yellow part
 icon_file_yellow=''
 if weather_icon == "pcloud":
@@ -143,7 +146,9 @@ elif weather_icon=="night":
 
 # make sure we should be drawing the yellow image and do it
 if icon_file_yellow != "":
-    frame_yellow = disp.get_frame_buffer(Image.open(icon_file_yellow))
+    dir = os.path.dirname(__file__)
+    file_path=os.path.join(dir,icon_file_yellow)
+    frame_yellow = disp.get_frame_buffer(Image.open(file_path))
 
 ## draw Text
 disp.set_rotate(1)
